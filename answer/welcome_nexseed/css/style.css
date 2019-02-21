@@ -33,7 +33,6 @@ header {
 }
 /* headerここまで */
 
-
 /* welcome */
 .welcome {
   display: flex;
@@ -43,17 +42,18 @@ header {
   background-image: url(../img/background1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 700px;
+  height: 100vh;
   color: #fff;
 }
 
 .title{
-  font-size: 64px;
+  font-size: 80px;
 }
 
 .guideline {
   margin-top: 50px;
-  font-size: 28px;
+  font-size: 40px;
+  letter-spacing: 1px;
   font-weight: bold;
 }
 
@@ -66,106 +66,45 @@ header {
 }
 /* welcomeここまで */
 
-
-/* curriculum */
-.curriculum {
-  margin-top: 50px;
-}
-
-.sub-title {
-  text-align: center;
-  font-size: 36px;
-}
-
-.img-box {
-  margin-top: 50px;
+/* programming, English共通 */
+.programming,
+.english {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-.img-box li {
-  display: flex;
-  flex-direction: column;
-  margin-right: 60px;
-  text-align: center;
+.curriculum-img {
+  border-radius: 50%;
+  height: 400px;
 }
 
-.img-box li:last-child {
-  margin-right: 0;
-}
-
-.img-box li img {
-  height: 300px;
-  width: 300px;
-}
-
-.img-box li span {
-  font-size: 24px;
-  margin-top: 20px;
-}
-/* curriculumここまで */
-
-/* contact */
-.contact {
+.text-box {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  height: 350px;
-  margin-top: 50px;
-  background-color: #ebf4f5;
+  align-items: center;
+  color: #ddd;
 }
 
-.contact .form {
-  margin: 50px 0 40px;
-  display: flex;
-  justify-content: center;
+.programming .title,
+.english .title {
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
-.form .name {
-  margin-bottom: 20px;
+.description {
+  line-height: 32px;
+  font-size: 22px;
 }
-
-.form .name, 
-.form .email {
-  height: 50px;
-  width: 400px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.form-left {
-  margin-right: 50px;
-}
-
-.form .inquiry {
-  height: 120px;
-  width: 400px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.contact button {
-  background-color: #1dace0;
-  color: #fff;
-  border: 3px solid #1dace0;
-  border-radius: 10px;
-  font-size: 24px;
-  padding: 15px 30px;
-  box-sizing: border-box;
-  transition-duration: 500ms;
-}
-
-.contact button:hover {
-  background-color: #fff;
-  color: #1dace0;
-  transition-duration: 500ms;
-}
-/* contactここまで */
-
+/* programming, English共通ここまで */
 
 /* footer */
 footer {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   background-color: #233f51;

@@ -2,6 +2,14 @@ console.log('----------------練習問題----------------');
 
 
 console.log('----------------偶数、奇数----------------');
+/**
+ * 変数iが偶数の場合は偶数です。
+ * 変数iが奇数の場合は奇数です。
+ * と表示されるプログラムを書いてください。
+ * ※条件分岐を使用します。
+ * ※偶数は「2で割り切れる(2で割ったあまりが0と表すことができます)」
+ */
+
 console.log('偶数、奇数(if文)----------------');
 let i = 2;
 if (i % 2 === 0) {
@@ -14,18 +22,40 @@ console.log('偶数、奇数(switch文)----------------');
 i = 4;
 switch (i % 2 === 0) {
     case true:
-        console.log(i + 'は偶数');
+        console.log(i + 'は偶数です');
         break;
     default:
-        console.log(i +  'は奇数');
+        console.log(i +  'は奇数です');
         break;
 }
 
+console.log('----------------合格判定----------------');
+/**
+ * 英語と数学の点数がそれぞれ60点以上かつ、
+ * 合計点が140点以上の場合は、合格、
+ * それ以外の場合は、不合格
+ * と表示するプログラムを書いてください。
+ */
+let math = 50;
+let english = 100;
+let total = math + english;
+if (math >= 60 && english >= 60 && total >= 140) {
+  console.log('合格');
+} else {
+  console.log('不合格');
+}
+
+
 console.log('数を数える----------------');
+/**
+ * 配列numbersの中に数字の3が何個あるか画面に表示するプログラム
+ * を書いてください。
+ * ※繰り返し文とif文を使用します。
+ */
 let res = 0;
-let hoge3 = [1, 3, 4, 5, 8, 9, 3, 3];
-for (let v of hoge3) {
-    if (v === 3) {
+let numbers = [1, 3, 4, 5, 8, 9, 3, 3];
+for (let number of numbers) {
+    if (number === 3) {
         res++;
     }
 }
@@ -33,11 +63,23 @@ console.log(res);
 
 
 console.log('----------------3倍した数を表示する----------------');
+/**
+ * 1から10までの数字をそれぞれ3倍した数字を表示するプログラムを書いてください。
+ * 3 6 9 ... 30 までが表示されればOKです
+ */
 for (let i = 1; i <= 10; i++) {
     console.log(i * 3);
 }
 
 console.log('----------------FizzBuzz----------------');
+/**
+ * 1から100までの数字を出力するプログラムを書いてください。
+ * 但し、
+ * 3の倍数の場合はFizz
+ * 5の倍数の場合はBuzz
+ * 3と5の両方の倍数の場合はFizzBuzz
+ * と表示するようにしてください。
+ */
 console.log('for + if----------------');
 for (let i = 1; i <= 100; i++) {
   if (i % 5 === 0 && i % 3 === 0) {
@@ -84,85 +126,22 @@ while (i <= 100) {
   i++;
 }
 
-console.log('FizzBuzz(one liner)----------------');
-//わかりにくいので授業ではやらない
-for (let i = 1; i <= 100; i++) console.log((i % 3 ? '' : 'Fizz') + ( i % 5 ? '' : 'Buzz' ) || i);
-
-
-console.log('----------------関数----------------');
-
-
-console.log('----------------タイマー処理----------------');
-
-console.log('----------------多次元配列を作る----------------');
-// 以下のような多次元配列の作成 + メソッドの使用
-
-console.log('連想配列, メソッド----------------');
-
-let lufy = {
-  akumanomi: 'ゴムゴムの実',
-  gomugomuno: function(name) {
-    return `ゴムゴムの〜${name}!!!!`;
+console.log('----------------九九----------------');
+/**
+ * 九九を表示するプログラムを書いてください。
+ */
+for (let i = 1; i <= 9; i++) {
+  for (let j = 1; j <= 9; j++) {
+    let res = i * j;
+    console.log(res);
   }
 }
 
-let mugiwara = {
-  captain: lufy, 
-  crew: 'ゾロ'
-};
-
-let akagami = {
-  captain: 'シャンクス', 
-  crew: 'ベックマン'
-};
-
-let kaizoku = {
-  mugiwara: mugiwara,
-  akagami: akagami
-};
-
-let kaigun = 'ヘルメッポ';
-
-let onePiece = {
-  kaizoku: kaizoku,
-  kaigun: kaigun
-};
-
-console.log(onePiece.kaizoku.mugiwara.captain.gomugomuno('ピストル'));
-console.table(onePiece);
-
-console.log('----------------組み込みオブジェクト----------------');
-//偶数、奇数を表示する問題で、渡す数字をランダムにする
-i = Math.ceil(Math.random() * 10);
-if (i % 2 === 0) {
-  console.log(`${i}は偶数です`);
-} else {
-  console.log(`${i}は奇数です`);
-}
-
-//三項演算子で書いた場合
-// let result = i % 2 === 0 ? 'は偶数' : 'は奇数'; 
-// console.log(i + result);
-
-//おみくじを作ろう 数値 + 配列 + 関数
-console.log('数値----------------');
-function omikuji(name) {
-  i = Math.floor(Math.random() * 4);
-  omikuji = ['大吉', '吉', '中吉', '末吉', '凶'];
-  return `${name}の運勢は${omikuji[i]}です`;
-}
-console.log(omikuji('yoshimi'));
-
-
-console.log('----------------繰り返し処理再び----------------');
-//上で作った多次元配列を表示する
-// for (let v of onePiece) {
-//   console.log(v);
-// }
-
 console.log('繰り返しの中断、スキップ----------------');
+/**
+ * 九九の中で答えが30未満の数値だけ表示してください。
+ */
 
-//九九で結果が30以下になった場合のみ画面に出力(continueを使用する)
 for (let i = 1; i <= 9; i++) {
   for (let j = 1; j <= 9; j++) {
     let res = i * j;
@@ -173,25 +152,49 @@ for (let i = 1; i <= 9; i++) {
   }
 }
 
-//DOMの操作
-//ユーザーが入力した内容を元にリンクを作成
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('btn').addEventListener('click', function() {
-    //入力内容取得
-    let url = document.getElementById('url');
-    let site = document.getElementById('site');
+// チャレンジ問題
+console.log('----------------女湯問題----------------');
+/**
+ * 顧客の年齢と性別から顧客が女湯に入れるか判断するプログラムを書いてください。
+ * 顧客を表す変数customerを定義してください
+ * 変数customerにはkey ageと、key genderをもつ連想配列を代入してください。
+ * ageには任意の数字を入れてください。
+ * genderは male, female, otherのいずれかにしてください。
+ * 女湯に入れる場合は「入れます」、入れない場合は「入れない」と表示してください。
+ */
 
-    let anchor = document.createElement('a');
-    anchor.href = url.value;
-    
-    let text = document.createTextNode(site.value);
-    anchor.appendChild(text);
-    
-    let br = document.createElement('br');
+let customer = {age: 28, gender: 'male'};
 
-    let list = document.getElementById('list');
-    list.appendChild(anchor);
-    list.appendChild(br);
+if (customer['gender'] === 'female')  {
+  console.log('入れます');
+} else {
+  if (customer['age'] <= 3) {
+    console.log('入れます');
+  } else {
+    console.log('入れません');
+  }
+}
 
-  }, false);
-})
+console.log('----------------素数を表示するプログラム----------------');
+/**
+ * 100以下の素数を表示してください。
+ * 1は素数には含みません。
+ * 素数とは1とその数以外では割り切れない数です。
+ * 言い方をかえると約数が2つしかない数です。
+ */
+for (let i = 2; i < 100; i++) {
+  for (let j = 2; j <= i; j++) {
+    if (i % j === 0 && j < i) {
+      break;
+    } 
+
+    if (i === j) {
+      console.log(i);
+    }
+  }
+}
+/**
+ * 問題の解き方は複数あり、この解き方も改善の余地があります。
+ * 偶数の場合は2で割り切れるので素数にならない(2は除く)
+ * 割る数が割られる数の半分以上になった場合は割り切れないので判定不要など
+ */

@@ -1,5 +1,5 @@
 /* header */
-header {
+.header {
   display: flex;
   justify-content: space-between;
   background-color: #1dace0;
@@ -77,7 +77,6 @@ header {
 }
 
 .curriculum-img {
-  border-radius: 50%;
   height: 400px;
 }
 
@@ -103,7 +102,7 @@ header {
 /* programming, English共通ここまで */
 
 /* footer */
-footer {
+.footer {
   margin-top: 100px;
   display: flex;
   justify-content: center;

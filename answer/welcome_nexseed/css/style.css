@@ -5,13 +5,12 @@
   background-color: #1dace0;
   color: #fff;
   font-size: 18px;
-  padding: 5px 0;
+  padding: 5px 80px;
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  margin-left: 80px;
 }
 
 .header-left img {
@@ -25,10 +24,9 @@
 .header-right {
   display: flex;
   align-items: center;
-  margin-right: 80px;
 }
 
-.header-right li:first-child {
+.header-right div:first-child {
   margin-right: 20px;
 }
 /* headerここまで */
